@@ -1,0 +1,9 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+  <form action="" method="post">
+    {% csrf_token %}
+    <p>Are you sure you want to delete "{{ object }}"?</p> <!--thats what delete view does automatically-->
+    <input class='btn btn-danger' type="submit" value="Confirm" />
+  </form>
+{% endblock %}
